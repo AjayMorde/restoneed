@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* 
+ 
+
+/* navbar style start  from here --> */
+
+.mainnavbar {
+  width: 100%;
+  height: 10rem;
+  display: grid;
+  grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+  background-color: black;
+   /* position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0; */
+ 
+  
+}
+
+.logo {
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.menu-link {
+  grid-column: 3/4;
+  
+}
+
+.menu-link ul {
+  height: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-media {
+  grid-column: 4/5;
+  margin-top: 10px;
+}
+
+.social-media ul {
+  height: 10rem;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.social-media ul li {
+  text-align: right;
+}
+
+.social-media ul li:first-child {
+  grid-column: 2/3;
+}
+
+
+
+
+  
+
+.logo h2 span {
+  font-size: 3.5rem;
+}
+
+.menu-link ul li {
+  font-size: 1.8rem;
+}
+.menu-link ul li span{
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+.menu-link ul li a{
+    color: white;
+     font-family: sans-serif;
+    font-weight: 500; 
+}
+
+
+
+
+.menu-link ul li:hover > a {
+  transform-origin: left;
+  color: skyblue;
+  /* text-decoration: underline; */
+  transition: 0.5s;
+}
+
+.social-media ul li {
+  font-size: 1.8rem;
+}
+
+
+ 
+
+.social-media .hamburger-menu {
+  display: none;
+}
+
+.linledin {
+  color:#0077b5 ;
+}
+
+.instagram {
+  color: #d62976;
+}
+
+.twitter {
+  color: #00acee;
+}
+
+/* hero section   */
+
+.main-body {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-body p {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.main-body h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* responsive css style  */
+@media (max-width: 1080px) {
+  .mainnavbar {
+    height: 8rem;
+    grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
+  }
+
+  .logo,
+  .menu-link ul,
+  .social-media ul {
+    height: 8rem;
+  }
+}
+
+/* responsive css style  */
+@media (max-width: 998px) {
+  .mainnavbar {
+    height: 7rem;
+    grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
+  }
+
+  .menu-link {
+    display: none;
+  }
+
+  .logo,
+  .social-media ul {
+    height: 7rem;
+  }
+
+  .mobile-menu-link {
+    grid-column: 2/4;
+    position: relative;
+    z-index: 99;
+  }
+
+  .mobile-menu-link {
+    
+    height: 20rem;
+    display: grid;
+    grid-column: 2/5;
+    align-items: center;
+    padding-left: 3rem;
+    transition: all 2s linear;
+    transform-origin: top;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+
+  .mobile-menu-link ul {
+    height: 20rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 999;
+  }
+
+  .mobile-menu-link ul li a{
+    color: black;
+    /* font-family: sans-serif; */
+    font-weight: 500; 
+  }
+  
+
+  .mobile-menu-link ul li:first-child {
+    transition-delay: 0.2s;
+  }
+
+  .social-media {
+    grid-row: 1/2;
+    grid-column: 3/5;
+    justify-items: end;
+    align-items: center;
+    transition: all 2s linear;
+  }
+
+  .social-media .socail-apps-for-desktop {
+    height: 0;
+    display: none;
+  }
+
+  .social-media {
+    height: 7rem;
+    display: flex;
+    justify-self: end;
+    align-items: center;
+  }
+
+  .social-media .hamburger-menu {
+    display: block;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 798px) {
+  .mainnavbar {
+    height: 6rem;
+    grid-template-columns: 1rem 2fr 1fr 1fr 1rem;
+  }
+
+ 
+
+  .social-media {
+    height: 6rem;
+    display: flex;
+    justify-self: end;
+    align-items: center;
+  }
+
+  .social-media .hamburger-menu {
+    display: block;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .mainnavbar {
+    height: 6rem;
+    grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+ 
+  }
+   .mobile-menu-link ul{ 
+    z-index: 999;
+    background-color:white;
+    width: 360px;
+    height: 220px;
+  
+    position: relative;
+    right: 40px;
+    top:-20px;
+    padding-left: 20px;
+    font-weight: 900;
+  }
+  .mobile-menu-link  ul li:hover > a {
+    transform-origin: left;
+    color: rgb(15, 147, 235);
+    /* text-decoration: underline; */
+    transition: 0.5s;
+  }
+  
+
+  
+
+  
+  .social-media ul {
+    height: 6rem;
+  }
+
+  .mainnavbar .logo img{
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+
+
+
+  .social-media {
+    height: 6rem;
+    display: flex;
+    justify-self: end;
+    align-items: center;
+  }
+
+  .social-media .hamburger-menu {
+    display: block;
+    font-size: 2.5rem;
+   
+  }
+
+  /* hero section  */
+
+  .main-body h1 {
+    font-size: 3.8rem;
+  }
+ /* Add this to your existing CSS */
+
+
+
+
+}

@@ -1,0 +1,105 @@
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+footer .col img{
+    width: 150px;
+    height: 50px;
+}
+
+ .col .logo1{
+    position: relative;
+    bottom: 20px;
+
+}
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer  .fpllow i{
+    color: #465b52;
+    cursor: pointer;
+    padding-right: 4px;
+}
+
+footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+
+}
+footer .follow i:hover,
+footer a:hover{
+    color: #8818;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+
+
+.logo h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#eee, rgb(69, 57, 248));
+    background: linear-gradient(#eee, rgb(69, 57, 248)); 
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+  }
+  
+
+
+
+
+.icon {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  .icon i {
+    font-size: 24px; 
+    margin: 0 8px; 
+    color: #333;
+  }
+  
+  
+
+  .icon .fab.fa-twitter {
+    color: #1da1f2; 
+  }
+  
+ 
+  .icon .fab.fa-instagram {
+    color: #c13584; 
+  }
+
+  .icon .fab.fa-linkedin {
+    color: #0077b5; 
+  }
+  

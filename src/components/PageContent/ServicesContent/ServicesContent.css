@@ -1,0 +1,204 @@
+.servicesHead{
+    background-image: url(./images/servicesscr.png);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+   
+    
+}
+.servicesHead h2
+{
+    color: white;
+    
+    font-size: 60px;
+
+
+    font-weight: bold;
+}
+
+.staff {
+    display: flex;
+    justify-content: space-around;
+    
+    padding: 20px;
+  }
+  
+
+  
+
+  .staff h1 {
+    
+    font-size: 2rem;
+    font-weight: bold;
+    color: green;
+    margin-left: 60px;
+  }
+  
+  .staff  p {
+        width: 70%; 
+        max-width: 600px; 
+        margin: 0 auto; 
+        line-height: 1.5; 
+        font-size: 15px;
+      }
+  
+  
+  .serimg {
+    text-align: center;
+  }
+  
+  .serimg img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px; 
+  }
+
+
+  #scanner{
+    color: #333;
+    font-size: 36px;
+    text-align: center;
+    margin: 30px 0 30px 0;
+
+  }
+  .staff-benifits,
+  .staff-benifits.ben {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; 
+    margin: 15px 0;
+    padding: 20px;
+  }
+  
+  .staff-benifits ul,
+  .staff-benifits.ben ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .staff-benifits li,
+  .staff-benifits.ben li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: green;
+  }
+  
+  .staff-benifits li:before,
+  .staff-benifits.ben li:before {
+    content: '\2022';
+    color: green;
+    font-size: 40px;
+    position: absolute;
+    left: 0;
+    top: 50%; 
+    transform: translateY(-50%); 
+  }
+  
+  #staffimg,
+  #cusimg2 {
+    max-width: 150px;
+  }
+  .owner img {
+   margin-left: 30PX;
+
+    
+  }
+
+
+
+  @media (max-width: 520px) {
+    .staff {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .serimg {
+      order: -1; 
+    }
+  
+    .servicesHead h2 {
+      font-size: 24px;
+    }
+  
+    .staff p {
+        margin: 10px 0 10px 0;
+      width: 100%; 
+      line-height: 1.5; 
+      font-size: 15px;
+    }
+  
+    .staff h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: green;
+      margin-right: 30px;
+    }
+  
+    .serimg img {
+      max-width: 100%;
+      margin: 10px 0; 
+    }
+  
+    #scanner {
+      font-size: 22px;
+      margin: 15px 0;
+      font-weight:bold
+    }
+
+    .servicesHead{
+      
+        
+        height: 30vh;
+     
+       
+        
+    }
+    /* staff and customers */
+
+    .staff-benifits,
+    .staff-benifits.ben {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .staff-benifits li,
+  .staff-benifits.ben li {
+    text-align: left; 
+    font-size: 16px;
+    margin-bottom: 10px; 
+    color: green;
+  }
+
+  .staff-benifits li:before,
+  .staff-benifits.ben li:before {
+    content: '\2022';
+    color: green;
+    font-size: 40px;
+    margin-right: 5px;
+  }
+    
+  
+    #staffimg img,
+    #cusimg2 img {
+      position: relative;
+      right: 90px;
+      width: 330px; 
+     
+     
+      height: 230px;
+      margin: 0 auto 10px; 
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+  }
