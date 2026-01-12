@@ -11,7 +11,7 @@ const app = express();
 
 // middleware
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: "*",
   credentials: true
 }));
 app.use(express.json());
@@ -26,10 +26,14 @@ app.get('/', (req, res) => {
 app.use('/api/form', formRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api', protectedRoutes);
+
 // db
 sequelize.sync({ alter: true })
   .then(() => console.log('Database synced'))
-  .catch(err => console.error(err));
+  .catch(err => {
+    console.error("DB ERROR:", err);
+    process.exit(1);
+  });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
