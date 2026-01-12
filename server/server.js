@@ -9,7 +9,14 @@ const protectedRoutes = require('./routes/protectedRoutes');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://YOUR-FRONTEND-URL.onrender.com"
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
