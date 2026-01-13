@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
+
 
 const sequelize = require('./connection/database');
 const formRoutes = require('./routes/formRoutes');
@@ -13,10 +13,11 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://YOUR-FRONTEND-URL.onrender.com"
+    "https://jade-sawine-089dc0.netlify.app"
   ],
   credentials: true
 }));
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
