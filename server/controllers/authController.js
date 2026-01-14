@@ -6,9 +6,10 @@ if (!process.env.JWT_SECRET) {
   throw new Error('JWT_SECRET is not defined');
 }
 
+// SIGNUP
 exports.signup = async (req, res) => {
   try {
-    let { email, password } = req.body;
+    let { email, password, role } = req.body;
 
     if (!email || !password) {
       return res.status(400).json({ message: 'All fields required' });
@@ -23,12 +24,19 @@ exports.signup = async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    // default role
+    if (!role) role = "staff";
+
     await User.create({
       email,
-      password: hashedPassword
+      password: hashedPassword,
+      role
     });
 
-    res.status(201).json({ message: 'User registered successfully' });
+    res.status(201).json({
+      message: 'User registered successfully',
+      role
+    });
 
   } catch (error) {
     console.error(error);
@@ -36,6 +44,7 @@ exports.signup = async (req, res) => {
   }
 };
 
+// LOGIN
 exports.login = async (req, res) => {
   try {
     let { email, password } = req.body;
@@ -57,12 +66,15 @@ exports.login = async (req, res) => {
     }
 
     const token = jwt.sign(
-      { userId: user.id },
+      { userId: user.id, role: user.role },
       process.env.JWT_SECRET,
       { expiresIn: '1d' }
     );
 
-    res.status(200).json({ token });
+    res.status(200).json({
+      token,
+      role: user.role
+    });
 
   } catch (error) {
     console.error(error);
