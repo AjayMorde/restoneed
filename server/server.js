@@ -11,12 +11,10 @@ const protectedRoutes = require('./routes/protectedRoutes');
 const app = express();
 
 app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "https://jade-sawine-089dc0.netlify.app"
-  ],
+  origin: process.env.CLIENT_URL,
   credentials: true
 }));
+
 
 
 app.use(express.json());
