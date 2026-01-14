@@ -22,27 +22,15 @@ const User = sequelize.define('User', {
     allowNull: false,
   },
 
-  role: {
-    type: DataTypes.ENUM("manager", "cook", "staff"),
-    defaultValue: "staff"
+  role: {                       
+    type: DataTypes.STRING,
+    defaultValue: "user"
   }
 
 }, {
   tableName: 'users',
   timestamps: true,
-
-  hooks: {
-    beforeCreate: (user) => {
-      user.email = user.email.toLowerCase();
-    }
-  },
-
-  indexes: [
-    {
-      unique: true,
-      fields: ['email']
-    }
-  ]
 });
 
 module.exports = User;
+

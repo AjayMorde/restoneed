@@ -31,7 +31,8 @@ app.use('/api/form', formRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api', protectedRoutes);
 
-sequelize.sync()
+sequelize.sync({ alter: true })
+
   .then(() => console.log('Database synced'))
   .catch(err => console.error(err));
 
