@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const helmet = require('helmet');
 
 
 const sequelize = require('./connection/database');
@@ -9,6 +10,8 @@ const authRoutes = require('./routes/authRoutes');
 const protectedRoutes = require('./routes/protectedRoutes');
 
 const app = express();
+app.use(helmet());
+
 
 app.use(cors({
   origin: process.env.CLIENT_URL,
