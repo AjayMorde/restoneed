@@ -41,13 +41,14 @@ const UserSignup = () => {
     try {
       setLoading(true);
 
-      // 🔥 THIS WAS MISSING BEFORE
+      // signup + send otp
       await api.post('/auth/signup', {
         email,
         password
       });
 
-      navigate('/login');
+      // redirect to otp page
+      navigate('/verify-otp', { state: { email } });
 
     } catch (err) {
       setError(err.response?.data?.message || 'Signup failed');
@@ -88,7 +89,7 @@ const UserSignup = () => {
         />
 
         <button type="submit" disabled={loading}>
-          {loading ? 'Signing up...' : 'Submit'}
+          {loading ? 'Sending OTP...' : 'Create Account'}
         </button>
 
         <div className="userdata">

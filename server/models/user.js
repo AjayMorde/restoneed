@@ -25,6 +25,22 @@ const User = sequelize.define('User', {
   role: {                       
     type: DataTypes.STRING,
     defaultValue: "user"
+  },
+
+  // 🔥 NEW FIELDS FOR OTP
+  otp: {
+    type: DataTypes.STRING(6),
+    allowNull: true
+  },
+
+  otpExpiry: {
+    type: DataTypes.DATE,
+    allowNull: true
+  },
+
+  isVerified: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
   }
 
 }, {
@@ -33,4 +49,3 @@ const User = sequelize.define('User', {
 });
 
 module.exports = User;
-

@@ -31,6 +31,8 @@ const App = () => {
           <Route path="/dashboard" element={<Dashboard />} />
 
           <Route path="*" element={<Error />} />
+          <Route path="/verify-otp" element={<VerifyOtp/>}/>
+
         </Routes>
       </BrowserRouter>
     </div>
